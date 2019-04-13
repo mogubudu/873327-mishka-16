@@ -14,11 +14,11 @@
             Открыть меню
           </button>
           <div class="main-menu__wrapper">
-            <ul class="main-nav__list site-list">
+            <ul class="main-menu__list site-list">
               <li class="site-list__item">Каталог товаров</li>
               <li class="site-list__item">Вязание на заказ</li>
-              <li class="site-list__item site-list__search">Поиск по сайту</li>
-              <li class="site-list__item site-list__cart">Корзина:пока пуста</li>
+              <li class="site-list__item site-list--search">Поиск по сайту</li>
+              <li class="site-list__item site-list--cart">Корзина:пока пуста</li>
             </ul>
           </div>
         </nav>
@@ -44,15 +44,15 @@
         </p>
         <table class="popular-product__feature">
           <tr>
-            <td>Цвет:</td>
+            <th>Цвет:</th>
             <td>«Тиффани»/серый</td>
           </tr>
           <tr>
-            <td>Диаметр:</td>
+            <th>Диаметр:</th>
             <td>25 см</td>
           </tr>
           <tr>
-            <td>Высота:</td>
+            <th>Высота:</th>
             <td>15 см</td>
           </tr>
         </table>
@@ -67,7 +67,7 @@
       </section>
 
       <section class="advantages">
-        <div class="advantages_wrapper">
+        <div class="advantages__wrapper">
           <h2 class="advantages__title">Коротко о нас:</h2>
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--eco">
@@ -85,7 +85,7 @@
             <li class="advantages__item advantages__item--domestic">
               <span>Поддержка отечественного производителя</span>
             </li>
-            <li class="advantages__item--package">
+            <li class="advantages__item advantages__item--package">
               <span>Поставляется в подарочной упаковке</span>
             </li>
           </ul>
@@ -152,5 +152,28 @@
           <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">HTML Academy</a>
         </div>
       </footer>
+
+      <section class="modal">
+        <h2 class="modal__header">Добавить в корзину</h2>
+        <form action="https://echo.htmlacademy.ru" class="modal__card-form" method="get">
+          <span>Выберите размер:</span>
+          <ul class="modal__size-list size-list">
+            <li class="size-list__item">
+              <input type="checkbox" class="visually-hidden size-list__input" id="size-list__size-s">
+              <label for="size-list__size-s"></label>
+            </li>
+            <li class="size-list__item">
+              <input type="checkbox" class="visually-hidden size-list__input" id="size-list__size-m">
+              <label for="size-list__size-m"></label>
+            </li>
+            <li class="size-list__item">
+              <input type="checkbox" class="visually-hidden size-list__input" id="size-list__size-l">
+              <label for="size-list__size-l"></label>
+            </li>
+          </ul>
+
+          <button class="modal__button button" type="button">Добавить</button>
+        </form>
+      </section>
   </body>
 </html>
