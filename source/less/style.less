@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensans.woff") format("woff"),
+       url("../fonts/opensans.woff2") format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensansbold.woff") format("woff"),
+       url("../fonts/opensansbold.woff2") format("woff2");
+  font-weight: 700;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  background: white;
+  color: #444444;
+  font-size: 15px;
+  line-height: 24px;
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
+.button {
+  display: block;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  padding: 20px 85px;
+  outline: 2px solid #444444;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  color: #444444;
+  cursor: pointer;
+}
+
+@import "page-header.less";
+@import "main-menu.less";
+@import "site-list.less";
+@import "page-main.less";
+@import "catalog-list.less";
+@import "popular-product.less";
+@import "advantages.less";
+@import "reviews.less";
+@import "contacts.less";
+@import "map.less";
+@import "footer.less";
+@import "social.less";
+@import "modal.less";
+/* стили страницы каталога */
+@import "products.less";
