@@ -1,3 +1,42 @@
 .footer {
-  margin-top: 40px;
+  background-color: #f1f1f1;
+}
+
+.footer__wrapper {
+  width: 260px;
+  margin: 0 auto;
+}
+
+.footer__logo {
+  display: none;
+}
+
+.footer__social {
+  .no-list();
+  display: flex;
+}
+
+.footer__copyright {
+  color: #000000;
+  font-size: 19px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+@media (min-width: @tablet-width) {
+  .footer__wrapper {
+    width: 670px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer__logo {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .footer__wrapper {
+    width: 1050px;
+  }
 }

@@ -1,0 +1,160 @@
+.header {
+  outline: 1px solid tomato;
+  margin: 0 auto;
+}
+
+.header__wrapper {
+  width: 260px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__logo {
+  outline: 1px solid tomato;
+}
+
+.header__menu {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  outline: 1px solid tomato;
+}
+
+.header__menu-list {
+  .no-list();
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+
+  color: #000000;
+}
+
+.header__menu-item {
+  padding: 30px 45px;
+  outline: 1px solid tomato;
+}
+
+.header__menu-item--hidden {
+  display: none;
+}
+
+.header__user-menu {
+  .no-list();
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+
+  color: #000000;
+}
+
+.header__user-item {
+  padding: 30px 45px;
+  outline: 1px solid tomato;
+}
+
+.header__delivery {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .header__wrapper {
+    width: 670px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .header__logo {
+    width: 167px;
+    padding-top: 22px;
+  }
+
+  .header__menu {
+    order: 1;
+  }
+
+  .header__menu-toogle {
+    display: none;
+  }
+
+  .header__menu-list {
+    display: flex;
+    justify-content: space-between;
+    width: 305px;
+  }
+
+  .header__menu-item {
+    font-size: 15px;
+
+    padding: 0;
+    padding-top: 25px;
+  }
+
+  .header__user-menu {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .header__user-item--search {
+    font-size: 0;
+    width: 80px;
+  }
+
+  .header__user--cart {
+    width: 265px;
+    padding: 35px 0;
+    padding-left: 84px;
+  }
+
+  .header__delivery {
+    display: flex;
+    order: 2;
+    margin-left: auto;
+
+    padding-top: 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header__wrapper {
+    width: 1050px;
+  }
+
+  .header__logo {
+    order: 1;
+    width: 149px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .header__menu {
+    order: 0;
+    width: 380px;
+  }
+
+  .header__menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+  }
+
+  .header__menu-item {
+    font-size: 17px;
+    width: 190px;
+  }
+
+  .header__menu-item--hidden {
+    display: block;
+    font-size: 15px;
+  }
+
+  .header__user-menu {
+    order: 3;
+  }
+
+  .header__delivery {
+    order: 4;
+  }
+}
