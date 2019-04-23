@@ -1,7 +1,5 @@
 .catalog-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  .no-list();
   outline: 1px solid tomato;
 }
 
@@ -24,4 +22,22 @@
   font-size: 19px;
   line-height: 24px;
   font-weight: 700;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-list {
+    width: 670px;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .catalog-list__item {
+    width: 50%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-list {
+    width: 1050px;
+  }
 }
