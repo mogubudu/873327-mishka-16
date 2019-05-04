@@ -1,1 +1,57 @@
-// здесь будут добавлены стили в дальнейшем
+.map {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.map__image-block {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 67px;
+    height: 100px;
+    background: url("../../img/icon-map-pin.svg") no-repeat;
+    top: 144px;
+    left: 138px;
+  }
+}
+
+.map__image {
+  vertical-align: top;
+}
+
+@media (min-width: @tablet-width) {
+  .map__image-block {
+    width: 768px;
+
+    &::after {
+      left: 365px;
+    }
+  }
+
+  .map__image {
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map {
+    margin: 0;
+    margin-top: 71px;
+  }
+
+  .map__image-block {
+    width: 525px;
+
+    &::after {
+      left: 244px;
+    }
+  }
+
+  .map__image {
+    width: 525px;
+  }
+}

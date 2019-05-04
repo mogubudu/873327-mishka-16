@@ -1,13 +1,12 @@
 .contacts {
   margin: 0 auto;
   padding: 0;
-  outline: 1px solid tomato;
 }
 
 .contacts__wrapper {
   width: 260px;
   margin: 0 auto;
-  outline: 1px solid tomato;
+  padding-top: 40px;
 }
 
 .contacts__title {
@@ -19,16 +18,21 @@
   margin: 0;
 }
 
-.contancts__table {
-  margin-top: 40px;
+.contacts__table {
   font-size: 15px;
   line-height: 30px;
-  outline: 1px solid tomato;
+}
+
+.contacts__table tr {
+  display: inline-block;
+  margin-bottom: 30px;
 }
 
 .contacts__table th {
   font-weight: normal;
   padding-right: 30px;
+  text-align: left;
+  vertical-align: top;
 }
 
 .contacts__table a {
@@ -47,15 +51,9 @@
   }
 }
 
-.map {
-  width: 100%;
-  max-width: 320px;
-  margin: 0 auto;
-  outline: 1px solid tomato;
-}
-
 .contacts__button {
-  margin: 0 auto;
+  margin: 39px auto;
+  padding: 15px 50px;
 }
 
 @media (min-width: @tablet-width) {
@@ -72,6 +70,17 @@
     margin-bottom: 50px;
     font-size: 43px;
     line-height: 50px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 47px;
+      height: 81px;
+      right: 0;
+      top: -15px;
+      background: url("../../img/icon-flag.svg") no-repeat;
+    }
   }
 
   .contacts__table {
@@ -88,11 +97,6 @@
 
   .contacts__table th {
     vertical-align: top;
-  }
-
-  .map {
-    max-width: 768px;
-    margin: 0 auto;
   }
 
   .contacts__button {
@@ -122,9 +126,10 @@
     margin-left: auto;
   }
 
-  .map {
-    width: 525px;
-    margin: 0;
+  .contacts__title {
+    &::after {
+      left: -118px;
+    }
   }
 
   .contacts__button {
