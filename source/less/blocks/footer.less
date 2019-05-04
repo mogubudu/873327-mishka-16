@@ -14,6 +14,19 @@
 .footer__social {
   .no-list();
   display: flex;
+  height: 80px;
+  align-items: center;
+  width: 145px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.footer__item {
+  font-size: 0;
+}
+
+.footer__link img {
+  vertical-align: top;
 }
 
 .footer__copyright {
@@ -21,17 +34,43 @@
   font-size: 19px;
   line-height: 18px;
   font-weight: 700;
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 23px 0;
+}
+
+.footer__copyright-link {
+  font-size: 0;
+  height: 34px;
+  color: #63d1bb;
+}
+
+.footer__copyright-link img {
+  vertical-align: top;
+}
+
+.footer__copyright-text {
+  margin-right: 29px;
 }
 
 @media (min-width: @tablet-width) {
   .footer__wrapper {
-    width: 670px;
+    width: 668px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
   }
 
   .footer__logo {
     display: block;
+    width: 167px;
+  }
+
+  .footer__copyright {
+    border: none;
   }
 }
 

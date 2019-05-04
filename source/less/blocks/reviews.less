@@ -1,8 +1,21 @@
 .reviews {
   margin: 0;
   padding: 0;
-  outline: 1px solid tomato;
   background: #ffffff;
+  position: relative;
+  padding-bottom: 45px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    background: url("../../img/bg-zigzag-line.svg") repeat-x;
+    height: 6px;
+    width: 100%;
+    background-size: contain;
+  }
 }
 
 .reviews__wrapper {
@@ -17,18 +30,12 @@
   font-size: 25px;
   line-height: 30px;
   color: #000000;
-  outline: 1px solid tomato;
-}
-
-.reviews__list {
-  outline: 1px solid tomato;
 }
 
 .reviews__item {
   padding: 0;
   margin: 0;
   margin-top: 35px;
-  outline: 1px solid tomato;
 }
 
 .reviews__text {
@@ -36,7 +43,7 @@
   margin: 0;
   font-size: 15px;
   line-height: 30px;
-  outline: 1px solid tomato;
+  padding-bottom: 35px;
 }
 
 .reviews__author {
@@ -54,14 +61,37 @@
   text-decoration: none;
 }
 
-.reviews__write {
-  outline: 1px solid tomato;
-  margin-bottom: 45px;
+.reviews__column-2 {
+  display: flex;
+}
+
+.reviews__button {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  width: 50%;
+  font-size: 0;
+  height: 52px;
+  border: 1px solid #ececec;
+  cursor: pointer;
+}
+
+.reviews__button--prev {
+  background: #ffffff url("../../img/icon-left-arrow.svg") no-repeat 50%;
+}
+
+.reviews__button--next {
+  background: #ffffff url("../../img/icon-right-arrow.svg") no-repeat 50%;
 }
 
 @media (min-width: @tablet-width) {
   .reviews {
     background: #ffffff url("../img/review@1x.jpg") no-repeat;
+    padding-bottom: 67px;
+
+    &::after {
+      height: 17px;
+      background-size: 772px 17px;
+    }
   }
 
   .reviews__wrapper {
@@ -94,15 +124,30 @@
 
   .reviews__author-wrapper {
     display: flex;
-    margin-bottom: 50px;
   }
 
   .reviews__column-2 {
+    width: 167px;
     margin-left: auto;
+  }
+
+  .reviews__button {
+    margin-top: 0;
+    border: none;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .reviews {
+    background-position: 54px top;
+    padding-bottom: 120px;
+
+    &::after {
+      height: 23px;
+      background-size: 1052px 23px;
+    }
+  }
+
   .reviews__wrapper {
     width: 1050px;
     padding-left: 175px;
@@ -115,13 +160,6 @@
 
   .reviews__text {
     margin-bottom: 45px;
-  }
-
-  .reviews__author-wrapper {
-    margin-bottom: 100px;
-  }
-
-  .reviews__write {
-    margin-bottom: 50px;
+    padding-right: 105px;
   }
 }

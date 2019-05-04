@@ -10,22 +10,40 @@
     <header class="header">
       <div class="header__wrapper">
         <a class="header__logo">
-          <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина «Мишка»" class="header__logo-image">
+          <picture>
+            <source media="(min-width: 1050px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина «Мишка»" class="header__logo-image">
+          </picture>
         </a>
         <nav class="header__menu">
           <button class="header__menu-toogle">
             Открыть меню
           </button>
             <ul class="header__menu-list">
-              <li class="header__menu-item">Каталог товаров</li>
-              <li class="header__menu-item">Вязание на заказ</li>
-              <li class="header__menu-item header__menu-item--hidden">Новые поступления</li>
-              <li class="header__menu-item header__menu-item--hidden">Распродажа</li>
+              <li class="header__menu-item">
+                <a href="catalog.html">Каталог товаров</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="form.html">Вязание на заказ</a>
+              </li>
+            </ul>
+            <ul class="header__menu-list header__menu-list--hidden">
+              <li class="header__menu-item header__menu-item--hidden">
+                <a href="#">Новые поступления</a>
+              </li>
+              <li class="header__menu-item header__menu-item--hidden">
+                <a href="#">Распродажа</a>
+              </li>
             </ul>
         </nav>
         <ul class="header__user-menu">
-          <li class="header__user-item header__user-item--search">Поиск по сайту</li>
-          <li class="header__user-item header__user--cart">Корзина:пока пуста</li>
+          <li class="header__user-item header__user-item--search">
+            <a href="#">Поиск по сайту</a>
+          </li>
+          <li class="header__user-item header__user-item--cart">
+            <a href="cart.html">Корзина: пока пуста</a>
+          </li>
         </ul>
         <div class="header__delivery">Бесплатная доставка по России</div>
       </div>
@@ -34,71 +52,107 @@
     <main class="page-main">
       <h1 class="page-main__page-title page-main__catalog-title">Каталог товаров</h1>
 
-      <div class="products">
+      <section class="products">
         <ul class="products__list">
           <li class="products__item">
             <a href="zaichik.html" class="products__image-link">
-              <img src="http://placehold.it/260x195" alt="Фотография зайчика-попрыгайчика" class="products__image">
+              <picture>
+                <source media="(min-width: 1050px)" srcset="img/photo-hare-desktop@1x.jpg">
+                <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg">
+                <img src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Фотография зайчика-попрыгайчика" class="products__image">
+              </picture>
             </a>
             <div class="products__cart-block">
               <h2 class="products__title">
                 <a href="#" class="products__title-link">Зайчик-попрыгайчик</a>
               </h2>
               <p class="products__feature">Рост 30 см, вес 200г</p>
-              <span class="products__price">1 200 руб.</span>
-              <button class="products__cart button-cart">Добавить в корзину</button>
+              <div class="products__price-wrapper">
+                <span class="products__price">1 200 руб.</span>
+                <button class="products__cart">Добавить в корзину</button>
+              </div>
             </div>
           </li>
 
           <li class="products__item">
             <a href="corzinka.html" class="products__image-link">
-              <img src="http://placehold.it/260x195" alt="Фотография корзинки для белья" class="products__image">
+              <picture>
+                <source media="(min-width: 1050px)" srcset="img/photo-bowl-desktop@1x.jpg">
+                <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg">
+                <img src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Фотография зайчика-попрыгайчика" class="products__image">
+              </picture>
             </a>
             <div class="products__cart-block">
               <h2 class="products__title">
                 <a href="#" class="products__title-link">Корзинка для белья</a>
               </h2>
               <p class="products__feature">Диаметр 15 см, высота 10 см</p>
-              <span class="products__price">690 руб.</span>
-              <button class="products__cart button-cart">Добавить в корзину</button>
+              <div class="products__price-wrapper">
+                <span class="products__price">690 руб.</span>
+                <button class="products__cart">Добавить в корзину</button>
+              </div>
             </div>
           </li>
 
           <li class="products__item">
             <a href="big-corzinka.html" class="products__image-link">
-              <img src="http://placehold.it/260x195" alt="Фотография большой корзинки для игрушек" class="products__image">
+              <picture>
+                <source media="(min-width: 1050px)" srcset="img/photo-toys-desktop@1x.jpg">
+                <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg">
+                <img src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Фотография зайчика-попрыгайчика" class="products__image">
+              </picture>
             </a>
             <div class="products__cart-block">
               <h2 class="products__title">
                 <a href="#" class="products__title-link">Большая корзинка для игрушек</a>
               </h2>
               <p class="products__feature">Диаметр 30 см, высота 30 см</p>
-              <span class="products__price">1 500 руб.</span>
-              <button class="products__cart button-cart">Добавить в корзину</button>
+              <div class="products__price-wrapper">
+                <span class="products__price">1 500 руб.</span>
+                <button class="products__cart">Добавить в корзину</button>
+              </div>
             </div>
           </li>
-
         </ul>
-      </div>
+      </section>
+      <section class="video">
+        <div class="video__wrapper">
+          <h2 class="video__title">Процесс производства</h2>
+          <div class="video__record">
+            <picture>
+              <source media="(min-width: 1050px)" srcset="img/video-desktop@1x.jpg">
+              <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg">
+              <img src="img/video-mobile@1x.jpg" width="260px" height="150px" alt="Процесс производства наших товаров" class="video__record-img">
+            </picture>
+          </div>
+          <div class="video__description-wrapper">
+            <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+            <a href="form.html" class="video__button button">Сделать заказ</a>
+          </div>
+        </div>
+      </section>
     </main>
       <footer class="footer">
         <div class="footer__wrapper">
-          <a class="footer__logo"><img src="#" alt="Логотип «Мишка»" class="footer__logo-img" width="102" height="34"></a>
+          <a class="footer__logo"><img src="img/logo-footer.svg" alt="Логотип «Мишка»" class="footer__logo-img" width="102" height="34"></a>
           <ul class="footer__social">
             <li class="footer__item">
-              <a href="#" class="footer__link footer__link--instagram">«Мишка» в Instagram</a>
+              <a href="#" class="footer__link footer__link--instagram">
+                <img src="img/icon-insta.svg" width="22" height="21" alt="«Мишка» в Instagram">«Мишка» в Instagram</a>
             </li>
             <li class="footer__item">
-              <a href="#" class="footer__link footer__link--fb">«Мишка» в Фэйсбуке</a>
+              <a href="#" class="footer__link footer__link--fb">
+                <img src="img/icon-fb.svg" width="15" height="28" alt="«Мишка» в Фэйсбуке">«Мишка» в Фэйсбуке</a>
             </li>
             <li class="footer__item">
-              <a href="#" class="footer__link footer__link--twitter">«Мишка» в Твиттере</a>
+              <a href="#" class="footer__link footer__link--twitter">
+                <img src="img/icon-twitter.svg" width="23" height="20" alt="«Мишка» в Твиттере">«Мишка» в Твиттере</a>
             </li>
           </ul>
 
           <div class="footer__copyright">
             <b class="footer__copyright-text">Разработано</b>
-            <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__copyright-link">HTML Academy</a>
+            <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__copyright-link"><img src="img/logo-htmlacademy.svg" width="27" height="34" alt="Разработано в HTML Academy">HTML Academy</a>
           </div>
         </div>
       </footer>
