@@ -6,7 +6,7 @@
 .map__image-block {
   position: relative;
   width: 320px;
-  margin: 0 auto;
+  margin: 10px auto 0;
 
   &::after {
     content: "";
@@ -14,7 +14,7 @@
     width: 67px;
     height: 100px;
     background: url("../../img/icon-map-pin.svg") no-repeat;
-    top: 144px;
+    top: 138px;
     left: 138px;
   }
 }
@@ -26,6 +26,7 @@
 @media (min-width: @tablet-width) {
   .map__image-block {
     width: 768px;
+    margin: 29px auto 0;
 
     &::after {
       left: 365px;
@@ -45,9 +46,11 @@
 
   .map__image-block {
     width: 525px;
+    margin: 34px auto 0;
 
     &::after {
-      left: 244px;
+      left: 239px;
+      top: 145px;
     }
   }
 
