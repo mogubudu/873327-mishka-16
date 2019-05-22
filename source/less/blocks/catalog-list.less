@@ -4,24 +4,63 @@
   margin: 0 auto;
 }
 
+.catalog-list__icon {
+  fill: #149080;
+  position: absolute;
+  right: 34px;
+  top: 28px;
+  opacity: 0.5;
+}
+
 .catalog-list__item {
-  padding: 30px;
+  transition: transform 0.4s ease;
+
+  &:active .catalog-list__icon {
+    opacity: 0.3;
+  }
+
+  &:active a {
+    opacity: 0.3;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 }
 
 .catalog-list__item:nth-child(1) {
-  background: #63d1bb url("../../img/icon-interior.svg") no-repeat 89.5% center;
+  background-color: #63d1bb;
+
+  &:hover {
+    background-color: #59d5bc;
+  }
 }
 
 .catalog-list__item:nth-child(2) {
-  background: #56c3b2 url("../../img/icon-toy.svg") no-repeat 89.5% center;
+  background-color: #56c3b2;
+
+  &:hover {
+    background-color: #46c1ae;
+  }
 }
 
-.catalog-list__item a {
+.catalog-list__link {
+  display: block;
   color: #ffffff;
   text-decoration: none;
   font-size: 19px;
   line-height: 24px;
   font-weight: 700;
+  padding: 27px 0 26px 31px;
+  position: relative;
+
+  &:hover .catalog-list__icon {
+    opacity: 0.7;
+  }
+}
+
+.catalog-list__icon--interior {
+  right: 37px;
 }
 
 @media (min-width: @tablet-width) {
@@ -33,11 +72,21 @@
 
   .catalog-list__item {
     width: 50%;
+    letter-spacing: 0.8px;
+  }
+
+  .catalog-list__link {
+    line-height: 29px;
+    padding: 30px 0 28px 36px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .catalog-list {
     width: 1050px;
+  }
+
+  .catalog-list__link {
+    padding: 31px 37px;
   }
 }

@@ -12,7 +12,16 @@
 }
 
 .products__item {
-  margin-bottom: 30px;
+  margin-bottom: 28px;
+  transition: all 0.4s ease;
+
+  &:hover .products__cart-block {
+    box-shadow: 0 6px 10px 0 #ececec;
+  }
+
+  &:active .products__cart-block {
+    box-shadow: 0 3px 5px 0 #ececec;
+  }
 }
 
 .products__image-link {
@@ -26,9 +35,17 @@
 .products__title {
   font-size: 17px;
   line-height: 24px;
-  padding-top: 30px;
+  padding-top: 28px;
   color: #000000;
   margin: 0;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .products__title-link {
@@ -43,7 +60,7 @@
 }
 
 .products__feature {
-  padding: 20px 0 28px;
+  padding: 4px 0 12px;
   margin: 0;
   font-size: 13px;
   line-height: 30px;
@@ -52,7 +69,8 @@
 .products__price-wrapper {
   border-top: 1px solid #ececec;
   margin: 0;
-  padding-top: 28px;
+  margin-top: 7px;
+  padding-top: 21px;
   padding-bottom: 28px;
   display: flex;
   align-items: center;
@@ -70,9 +88,24 @@
   height: 19px;
   padding: 0;
   margin-left: auto;
-  background: #ffffff url("../../img/icon-cart.svg") no-repeat;
+  background: #ffffff;
   font-size: 0;
   border: none;
+  cursor: pointer;
+
+  &:hover .products__cart-icon {
+    opacity: 1;
+    fill: #63d1bb;
+  }
+
+  &:active .products__cart-icon {
+    fill: #63d1bb;
+    opacity: 0.3;
+  }
+}
+
+.products__cart-icon {
+  opacity: 0.2;
 }
 
 @media (min-width: @tablet-width) {
@@ -94,7 +127,7 @@
 
   .products__list {
     width: 670px;
-    padding-top: 54px;
+    padding-top: 68px;
   }
 
   .products__item {
@@ -110,6 +143,12 @@
     width: 334px;
   }
 
+  .products__title {
+    font-size: 20px;
+    padding-top: 26px;
+    max-width: 230px;
+  }
+
   .products__cart-block {
     width: 334px;
     display: flex;
@@ -117,8 +156,19 @@
   }
 
   .products__feature {
-    padding: 15px 0 0;
+    padding: 0;
+    padding-top: 3px;
+    font-size: 15px;
     margin-bottom: auto;
+  }
+
+  .products__price-wrapper {
+    padding-bottom: 27px;
+  }
+
+  .products__price {
+    font-size: 17px;
+    padding-left: 4px;
   }
 }
 
@@ -134,6 +184,7 @@
     width: 1050px;
     display: flex;
     justify-content: space-between;
+    padding-top: 121px;
   }
 
   .products__item {
@@ -154,5 +205,15 @@
 
   .products__image {
     width: 316px;
+  }
+
+  .products__price-wrapper {
+    margin-top: 14px;
+    padding-top: 13px;
+  }
+
+  .products__price {
+    padding-left: 0;
+    padding-top: 10px;
   }
 }
