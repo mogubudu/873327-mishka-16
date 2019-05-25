@@ -55,12 +55,6 @@
   padding-bottom: 15px;
 }
 
-.form__input--checkbox,
-.form__input--modal-checkbox,
-.form__input--radio {
-  display: none;
-}
-
 .form__label {
   display: flex;
   align-items: center;
@@ -102,7 +96,7 @@
   left: 10px;
   width: 33px;
   height: 22px;
-  background: url("../../img/icon-tick.svg") no-repeat;
+  background: url("../img/icon-tick.svg") no-repeat;
   background-size: 22px 22px;
   transform: translateY(-50%);
 }
@@ -192,6 +186,11 @@
   &:focus {
     border-color: #62d1ba;
     outline: none;
+  }
+
+  &:focus + .form__label--radio::before,
+  &:focus + .form__label--checkbox::before {
+    border-color: #62d1ba;
   }
 }
 
@@ -291,6 +290,7 @@
 
   .form__fieldset--name {
     margin-top: 9px;
+    padding-bottom: 16px;
   }
 
   .form__field-group {
@@ -369,10 +369,6 @@
     }
   }
 
-  .form__fieldset--name {
-    padding-bottom: 16px;
-  }
-
   .form__text-field-block {
     flex-direction: row;
     justify-content: space-between;
@@ -422,7 +418,7 @@
   }
 
   .form__fieldset--email {
-    padding: 0px 0 46px;
+    padding: 0 0 46px;
   }
 
   .form__fieldset--extra-wishes {
