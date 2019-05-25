@@ -7,6 +7,7 @@ var modalForm = document.querySelector(".modal");
 var modalOverlay = document.querySelector('.modal-overlay');
 var openModalForm = document.querySelectorAll(".js-to-cart");
 var closeModalForm = document.querySelector(".modal__button");
+var mapContainer = document.querySelector(".map");
 
 var closeMenu = function () {
   menuMain.classList.add("header__menu-hidden");
@@ -76,3 +77,25 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
+
+if (mapContainer) {
+  window.onload = function () {
+    var mapOptions = {
+      zoom: 16,
+      center: new google.maps.LatLng(59.9369, 30.3218)
+    }
+    var map = new google.maps.Map(mapContainer, mapOptions);
+    var image = {
+      url: "img/icon-map-pin.svg",
+      scaledSize: new google.maps.Size(100, 100)
+    }
+    var myLatLng = new google.maps.LatLng(59.9363, 30.3217);
+    var beachMarker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      optimized: false,
+      icon: image
+    });
+  }
+}
+
