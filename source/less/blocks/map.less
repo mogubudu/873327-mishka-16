@@ -1,20 +1,22 @@
 .map {
-  margin: 0 auto;
+  margin: 10px auto 0;
   padding: 0;
+  height: 457px;
+  width: 320px;
 }
 
 .map__image-block {
   position: relative;
   width: 320px;
-  margin: 0 auto;
+  margin: 10px auto 0;
 
   &::after {
     content: "";
     position: absolute;
     width: 67px;
     height: 100px;
-    background: url("../../img/icon-map-pin.svg") no-repeat;
-    top: 144px;
+    background: url("../img/icon-map-pin.svg") no-repeat;
+    top: 138px;
     left: 138px;
   }
 }
@@ -24,8 +26,14 @@
 }
 
 @media (min-width: @tablet-width) {
+  .map {
+    width: 768px;
+    margin: 29px auto 0;
+  }
+
   .map__image-block {
     width: 768px;
+    margin: 29px auto 0;
 
     &::after {
       left: 365px;
@@ -40,14 +48,18 @@
 @media (min-width: @desktop-width) {
   .map {
     margin: 0;
-    margin-top: 71px;
+    margin-top: 111px;
+    width: 525px;
+    height: 457px;
   }
 
   .map__image-block {
     width: 525px;
+    margin: 39px auto 0;
 
     &::after {
-      left: 244px;
+      left: 239px;
+      top: 145px;
     }
   }
 

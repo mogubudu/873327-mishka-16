@@ -1,8 +1,23 @@
 .modal {
-  background: white;
+  background: #ffffff;
   max-width: 320px;
   margin: 0 auto;
   display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+  z-index: 100;
+  border: 1px solid #c6c6c6;
+  border-left: none;
+  border-right: none;
+  min-height: 337px;
+  padding: 36px 30px 46px;
+}
+
+.modal--show {
+  display: block;
 }
 
 .modal__wrapper {
@@ -16,26 +31,68 @@
   font-weight: 700;
   color: #000000;
   margin: 0;
-  padding: 0 60px;
+  padding: 0 56px 8px;
   text-align: center;
+  text-transform: uppercase;
 }
 
-.modal__wrapper form {
+.modal__cart-form {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
 .modal__choose-size-title {
+  display: block;
+  width: 100%;
   font-size: 15px;
   line-height: 30px;
-  width: 100%;
   text-align: center;
+  margin-bottom: 28px;
 }
 
 .modal__size-list {
   .no-list();
   display: flex;
-  margin: 0 auto;
+  justify-content: space-between;
+  margin-bottom: 31px;
+}
+
+.modal__list-input {
+  display: none;
+
+  &:checked + .modal__label::before {
+    border-color: #62d1ba;
+  }
+}
+
+.modal__label {
+  justify-content: center;
+  position: relative;
+  width: 82px;
+  height: 52px;
+  padding: 15px 0;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    width: 82px;
+    height: 52px;
+    border: 2px solid #ececec;
+  }
+
+  &:hover::before {
+    border-color: #444444;
+  }
 }
 
 .modal__button {
@@ -51,16 +108,37 @@
 @media (min-width: @tablet-width) {
   .modal {
     max-width: 567px;
+    padding-top: 30px;
+    padding-left: 108px;
+    padding-right: 108px;
+    border-left: 1px solid #c6c6c6;
+    border-right: 1px solid #c6c6c6;
   }
 
   .modal__wrapper {
-    width: 350px;
+    width: 354px;
   }
 
   .modal__header {
+    width: 100%;
     padding: 0;
     font-size: 30px;
     line-height: 57px;
+    margin-bottom: 18px;
+  }
+
+  .modal__choose-size-title {
+    margin-bottom: 26px;
+    font-size: 17px;
+  }
+
+  .modal__label {
+    width: 112px;
+    font-size: 17px;
+
+    &::before {
+      width: 112px;
+    }
   }
 
   .modal__button {
