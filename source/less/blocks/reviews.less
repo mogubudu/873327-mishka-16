@@ -11,7 +11,7 @@
     left: 0;
     bottom: 0;
     display: block;
-    background: url("../../img/bg-zigzag-line.svg") repeat-x;
+    background: url("../img/bg-zigzag-line.svg") repeat-x;
     height: 6px;
     width: 100%;
     background-size: contain;
@@ -66,7 +66,7 @@
 }
 
 .reviews__button {
-  margin-top: 35px;
+  margin-top: 32px;
   margin-bottom: 35px;
   width: 50%;
   font-size: 0;
@@ -84,11 +84,11 @@
 }
 
 .reviews__button--prev {
-  background: #ffffff url("../../img/icon-left-arrow.svg") no-repeat 50%;
+  background: #ffffff url("../img/icon-left-arrow.svg") no-repeat 50%;
 }
 
 .reviews__button--next {
-  background: #ffffff url("../../img/icon-right-arrow.svg") no-repeat 50%;
+  background: #ffffff url("../img/icon-right-arrow.svg") no-repeat 50%;
 }
 
 .reviews__write {
@@ -143,21 +143,28 @@
     padding-bottom: 0;
   }
 
+  .reviews__author {
+    font-size: 18px;
+  }
+
   .reviews__author-wrapper {
     display: flex;
   }
 
-  .reviews__author {
-    letter-spacing: 0.8px;
+  .reviews__author-link {
+    line-height: 30px;
   }
 
-  .reviews__author-link {
-    line-height: 34px;
+  .reviews__column-1 {
+    display: flex;
+    flex-direction: column;
   }
 
   .reviews__column-2 {
     width: 167px;
     margin-left: auto;
+    margin-top: -58px;
+    order: 2;
   }
 
   .reviews__button {
@@ -166,17 +173,17 @@
   }
 
   .reviews__button--prev {
-    background: #ffffff url("../../img/icon-left-arrow.svg") no-repeat 10px 15px;
+    background: #ffffff url("../img/icon-left-arrow.svg") no-repeat 10px 15px;
   }
 
   .reviews__button--next {
-    background: #ffffff url("../../img/icon-right-arrow.svg") no-repeat 13px 15px;
+    background: #ffffff url("../img/icon-right-arrow.svg") no-repeat 13px 15px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .reviews {
-    background-position: 54px top;
+    background-position: 149px top;
     padding-bottom: 120px;
     margin-top: 36px;
 
@@ -189,7 +196,7 @@
   .reviews__wrapper {
     width: 1050px;
     padding-left: 175px;
-    padding-top: 70px;
+    padding-top: 66px;
   }
 
   .reviews__title {
@@ -203,7 +210,7 @@
   }
 
   .reviews__author {
-    letter-spacing: 0.1px;
+    font-size: 17px;
   }
 
   .reviews__write {

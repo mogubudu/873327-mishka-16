@@ -11,7 +11,7 @@
     height: 6px;
     top: 0;
     left: 0;
-    background: url("../../img/bg-zigzag-line.svg") repeat-x;
+    background: url("../img/bg-zigzag-line.svg") repeat-x;
     background-size: contain;
   }
 }
@@ -43,6 +43,7 @@
   color: #000000;
   padding-top: 85px;
   position: relative;
+  width: 260px;
 
   &::before {
     position: absolute;
@@ -51,8 +52,10 @@
 }
 
 .advantages__item--eco {
+  width: 200px;
+
   &::before {
-    background: url("../../img/icon-feature-flower.svg") no-repeat;
+    background: url("../img/icon-feature-flower.svg") no-repeat;
     width: 32px;
     height: 37px;
     top: 27px;
@@ -61,8 +64,11 @@
 }
 
 .advantages__item--scandinavian {
+  padding-right: 29px;
+  padding-top: 87px;
+
   &::before {
-    background: url("../../img/icon-feature-money.svg") no-repeat;
+    background: url("../img/icon-feature-money.svg") no-repeat;
     width: 47px;
     height: 27px;
     top: 32px;
@@ -71,8 +77,11 @@
 }
 
 .advantages__item--likes {
+  padding-top: 85px;
+  padding-right: 50px;
+
   &::before {
-    background: url("../../img/icon-feature-heart.svg") no-repeat;
+    background: url("../img/icon-feature-heart.svg") no-repeat;
     width: 34px;
     height: 27px;
     top: 35px;
@@ -82,7 +91,7 @@
 
 .advantages__item--handmade {
   &::before {
-    background: url("../../img/icon-feature-ball.svg") no-repeat;
+    background: url("../img/icon-feature-ball.svg") no-repeat;
     width: 35px;
     height: 34px;
     top: 31px;
@@ -92,7 +101,7 @@
 
 .advantages__item--domestic {
   &::before {
-    background: url("../../img/icon-feature-rocket.svg") no-repeat;
+    background: url("../img/icon-feature-rocket.svg") no-repeat;
     width: 55px;
     height: 23px;
     top: 33px;
@@ -102,9 +111,10 @@
 
 .advantages__item--package {
   padding-bottom: 55px;
+  padding-right: 10px;
 
   &::before {
-    background: url("../../img/icon-feature-gift.svg") no-repeat;
+    background: url("../img/icon-feature-gift.svg") no-repeat;
     width: 33px;
     height: 32px;
     top: 30px;
@@ -140,10 +150,12 @@
     font-size: 20px;
     line-height: 22px;
     padding-top: 103px;
+    padding-right: 40px;
   }
 
   .advantages__item--eco {
     order: 1;
+    padding-right: 100px;
 
     &::before {
       top: 50px;
@@ -154,6 +166,7 @@
   .advantages__item--scandinavian {
     order: 3;
     padding-top: 110px;
+    padding-right: 80px;
 
     &::before {
       top: 57px;
@@ -164,6 +177,7 @@
   .advantages__item--likes {
     order: 5;
     padding-top: 111px;
+    padding-right: 100px;
 
     &::before {
       top: 63px;
@@ -196,6 +210,7 @@
     order: 6;
     padding-top: 112px;
     letter-spacing: 0;
+    padding-right: 100px;
 
     &::before {
       top: 58px;
@@ -221,5 +236,21 @@
     font-size: 53px;
     line-height: 57px;
     margin-top: 67px;
+  }
+
+  .advantages__item--eco {
+    padding-right: 128px;
+  }
+
+  .advantages__item--handmade {
+    padding-right: 100px;
+  }
+
+  .advantages__item--scandinavian {
+    padding-right: 100px;
+  }
+
+  .advantages__item--likes {
+    padding-right: 115px;
   }
 }

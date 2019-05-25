@@ -55,12 +55,6 @@
   padding-bottom: 15px;
 }
 
-.form__input--checkbox,
-.form__input--modal-checkbox,
-.form__input--radio {
-  display: none;
-}
-
 .form__label {
   display: flex;
   align-items: center;
@@ -102,7 +96,7 @@
   left: 10px;
   width: 33px;
   height: 22px;
-  background: url("../../img/icon-tick.svg") no-repeat;
+  background: url("../img/icon-tick.svg") no-repeat;
   background-size: 22px 22px;
   transform: translateY(-50%);
 }
@@ -193,6 +187,11 @@
     border-color: #62d1ba;
     outline: none;
   }
+
+  &:focus + .form__label--radio::before,
+  &:focus + .form__label--checkbox::before {
+    border-color: #62d1ba;
+  }
 }
 
 .form__input--text {
@@ -207,6 +206,12 @@
 .form__fieldset--email,
 .form__fieldset--tel {
   padding-bottom: 32px;
+}
+
+.form__fieldset--tel {
+  padding-bottom: 12px;
+  margin-top: 19px;
+  margin-bottom: 20px;
 }
 
 .form__field-group-title--email,
@@ -283,6 +288,11 @@
     padding-top: 0;
   }
 
+  .form__fieldset--name {
+    margin-top: 9px;
+    padding-bottom: 16px;
+  }
+
   .form__field-group {
     display: flex;
     justify-content: space-between;
@@ -290,7 +300,7 @@
   }
 
   .form__field-group-title {
-    padding-top: 12px;
+    padding-top: 17px;
     padding-left: 2px;
 
     &::after {
@@ -306,7 +316,7 @@
 
   .form__checkbox-block,
   .form__radio-button-block {
-    min-height: 72px;
+    min-height: 74px;
     padding-bottom: 24px;
   }
 
@@ -359,10 +369,6 @@
     }
   }
 
-  .form__fieldset--name {
-    padding-bottom: 16px;
-  }
-
   .form__text-field-block {
     flex-direction: row;
     justify-content: space-between;
@@ -386,7 +392,9 @@
   }
 
   .form__fieldset--tel {
-    padding: 50px 0 0;
+    padding: 42px 0 0;
+    margin-bottom: 0;
+    margin-top: 10px;
   }
 
   .form__field-group--tel {
@@ -410,7 +418,7 @@
   }
 
   .form__fieldset--email {
-    padding: 0 0 50px;
+    padding: 0 0 46px;
   }
 
   .form__fieldset--extra-wishes {
@@ -466,7 +474,7 @@
   .form__controls {
     width: 798px;
     padding-left: 9px;
-    padding-top: 8px;
+    padding-top: 5px;
   }
 
   .form__fieldset--colors {
@@ -489,6 +497,7 @@
 
   .form__checkbox-block {
     width: 263px;
+    min-height: 72px;
   }
 
   .form__controls--name {
@@ -505,9 +514,15 @@
     padding-left: 17px;
   }
 
-  .form__field-group-title--email,
   .form__field-group-title--tel {
-    padding-top: 34px;
+    padding-top: 27px;
+    padding-left: 63px;
+    text-align: left;
+  }
+
+  .form__field-group-title--email {
+    padding-top: 30px;
+    padding-left: 12px;
   }
 
   .form__field-group--tel {
@@ -529,11 +544,17 @@
   }
 
   .form__fieldset--extra-wishes {
-    padding-bottom: 42px;
+    padding-top: 53px;
+    padding-bottom: 50px;
+  }
+
+  .form__field-group-title--other {
+    padding-top: 14px;
   }
 
   .form__input--big-text {
     width: 700px;
+    margin-top: -10px;
   }
 
   .form__footer .form__fieldset-wrapper {
