@@ -40,6 +40,7 @@
     padding-bottom: 92px;
     margin-top: -44px;
     padding-top: 93px;
+    width: 768px;
   }
 
   .order__wrapper {
@@ -50,8 +51,9 @@
       content: "";
       display: block;
       top: -83px;
-      left: 0;
-      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 768px;
       height: 24px;
       background: url("../img/bg-zigzag-fill.svg") repeat-x;
       background-size: 768px 26px;
@@ -77,11 +79,13 @@
     margin-top: -45px;
     font-size: 53px;
     line-height: 57px;
+    width: 1150px;
   }
 
   .order__wrapper {
     &::before {
       height: 34px;
+      width: 1150px;
       background-size: 1150px 34px;
       top: -136px;
     }
