@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -167,7 +170,6 @@
             <div class="reviews__author-wrapper">
               <div class="reviews__column-1">
                 <cite class="reviews__author">Анастасия Красильникова</cite>
-
                 <a href="https://instagram.com/misssssiskras" class="reviews__author-link">@misssssiskras</a>
               </div>
             </div>
@@ -264,17 +266,17 @@
           <form action="https://echo.htmlacademy.ru" class="modal__card-form" method="get">
             <span class="modal__choose-size-title">Выберите размер:</span>
             <ul class="modal__size-list">
-              <li class="modal-list__item">
-                <input type="checkbox" class="visually-hidden modal__list-input" id="modal__list__size-s">
-                <label for="modal__list__size-s" class="modal__label">S</label>
+              <li class="modal__list-item">
+                <input type="checkbox" class="visually-hidden modal__list-input" id="modal__list-input--size-s">
+                <label for="modal__list-input--size-s" class="modal__label">S</label>
               </li>
-              <li class="modal-list__item">
-                <input type="checkbox" class="visually-hidden modal__list-input" id="modal__list__size-m">
-                <label for="modal__list__size-m" class="modal__label">M</label>
+              <li class="modal__list-item">
+                <input type="checkbox" class="visually-hidden modal__list-input" id="modal__list-input--size-m">
+                <label for="modal__list-input--size-m" class="modal__label">M</label>
               </li>
-              <li class="modal-list__item">
-                <input type="checkbox" class="visually-hidden modal__list-input" id="modal__list__size-l">
-                <label for="modal__list__size-l" class="modal__label">L</label>
+              <li class="modal__list--item">
+                <input type="checkbox" class="visually-hidden modal__list-input" id="modal__list-input--size-l">
+                <label for="modal__list-input--size-l" class="modal__label">L</label>
               </li>
             </ul>
             <button class="modal__button button" type="submit">Добавить</button>
@@ -282,7 +284,7 @@
         </div>
       </section>
       <div class="modal-overlay"></div>
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGXcTzZiv8KVtVaH3i9klqPKV9NVoe1TI" async defer></script>
   </body>
 </html>

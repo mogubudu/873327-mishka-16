@@ -7,10 +7,11 @@
     content: "";
     position: absolute;
     display: block;
-    width: 100%;
+    width: 320px;
     height: 6px;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background: url("../img/bg-zigzag-line.svg") repeat-x;
     background-size: contain;
   }
@@ -125,6 +126,7 @@
 @media (min-width: @tablet-width) {
   .advantages {
     &::before {
+      width: 772px;
       height: 17px;
     }
   }
@@ -225,6 +227,7 @@
       height: 23px;
       background-size: 1050px 23px;
       top: 14px;
+      width: 1050px;
     }
   }
 
