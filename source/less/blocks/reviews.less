@@ -3,17 +3,17 @@
   padding: 0;
   background: #ffffff;
   position: relative;
-  padding-bottom: 45px;
 
   &::after {
     content: "";
     position: absolute;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 0;
     display: block;
     background: url("../img/bg-zigzag-line.svg") repeat-x;
     height: 6px;
-    width: 100%;
+    width: 320px;
     background-size: contain;
   }
 }
@@ -21,6 +21,7 @@
 .reviews__wrapper {
   width: 260px;
   margin: 0 auto;
+  padding-bottom: 45px;
 }
 
 .reviews__title {
@@ -97,27 +98,28 @@
 
 @media (min-width: @tablet-width) {
   .reviews {
-    background: #ffffff url("../img/review@1x.jpg") no-repeat;
-    padding-bottom: 67px;
     margin-top: 28px;
 
     &::after {
       height: 17px;
       background-size: contain;
       bottom: -34px;
+      width: 772px;
     }
+  }
+
+  .reviews__wrapper {
+    background: #ffffff url("../img/review@1x.jpg") no-repeat;
+    padding: 74px 50px 67px 50px;
+    width: 668px;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: content-box;
 
     @media (min-resolution: @retina-dpi) {
       background: #ffffff url("../img/review@2x.jpg") no-repeat;
       background-size: 350px 457px;
     }
-  }
-
-  .reviews__wrapper {
-    padding-top: 77px;
-    width: 670px;
-    display: flex;
-    flex-wrap: wrap;
   }
 
   .reviews__title {
@@ -133,18 +135,20 @@
   .reviews__write {
     order: 1;
     margin-bottom: 0;
+    margin-top: 2px;
     margin-left: auto;
     padding: 20px 41px;
   }
 
   .reviews__text {
     font-size: 17px;
-    margin-bottom: 58px;
+    margin-bottom: 56px;
     padding-bottom: 0;
   }
 
   .reviews__author {
     font-size: 18px;
+    margin-bottom: 4px;
   }
 
   .reviews__author-wrapper {
@@ -183,13 +187,12 @@
 
 @media (min-width: @desktop-width) {
   .reviews {
-    background-position: 149px top;
-    padding-bottom: 120px;
     margin-top: 36px;
 
     &::after {
       height: 23px;
       background-size: 1052px 23px;
+      width: 1052px;
     }
   }
 
@@ -197,6 +200,10 @@
     width: 1050px;
     padding-left: 175px;
     padding-top: 66px;
+    padding-bottom: 120px;
+    padding-right: 0;
+    background-position: 0 top;
+    box-sizing: border-box;
   }
 
   .reviews__title {
